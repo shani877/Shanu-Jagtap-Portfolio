@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanu Jagtap | DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        .text-purple {
+            color: #a855f7;
+        }
+        .text-blue {
+            color: #3b82f6;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #a855f7, #3b82f6);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .section {
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            width: 1px;
+            height: calc(100% - 15px);
+            background: #3b82f6;
+        }
+        .skill-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Shanu Jagtap</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="nav-link text-white px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#skills" class="nav-link text-white px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#additional" class="nav-link text-white px-3 py-2 text-sm font-medium">Work</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-white">About</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-white">Skills</a>
+                <a href="#work" class="block px-3 py-2 text-base font-medium text-white">Work</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        <span class="gradient-text">Shanu Jagtap</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-blue mb-6">DevOps Engineer</h2>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="tel:+916266499234" class="flex items-center text-purple hover:text-blue transition-colors">
+                            <i data-feather="phone" class="mr-2"></i> +91 62664 99234
+                        </a>
+                        <a href="mailto:shanujagtap@outlook.com" class="flex items-center text-purple hover:text-blue transition-colors">
+                            <i data-feather="mail" class="mr-2"></i> shanujagtap@outlook.com
+                        </a>
+                        <a href="https://github.com/shani877" target="_blank" class="flex items-center text-purple hover:text-blue transition-colors">
+                            <i data-feather="github" class="mr-2"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/shanu-jagtap-devops/" target="_blank" class="flex items-center text-purple hover:text-blue transition-colors">
+                            <i data-feather="linkedin" class="mr-2"></i> LinkedIn
+                        </a>
+                        <a href="https://medium.com/@D-Adda" target="_blank" class="flex items-center text-purple hover:text-blue transition-colors">
+                            <i data-feather="book" class="mr-2"></i> Blogs
+                        </a>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Passionate DevOps Engineer with experience in cloud infrastructure, CI/CD pipelines, and automation. Committed to building scalable and reliable systems.
+                    </p>
+
+                    <!-- Contact Form -->
+                    <div class="bg-gray-900 rounded-xl p-6 mt-8 border border-gray-800" data-aos="fade-up" data-aos-duration="800">
+                        <h3 class="text-xl font-semibold text-purple mb-4">Get in Touch</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" required 
+                                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                            </div>
+                            <button type="submit" 
+                                class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-6 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="formSuccess" class="hidden mt-4 p-4 bg-green-900 text-green-200 rounded-lg">
+                            Message sent successfully!
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="800" class="relative">
+                    <div class="relative w-full rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://huggingface.co/spaces/pinniu/zudy/resolve/main/images/IMG_20240926_084001.jpg" 
+                             alt="Shanu Jagtap Profile" 
+                             class="w-full object-cover transform scale-x-[-1]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl font-bold mb-8 text-purple">EDUCATION</h2>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold text-blue">Bachelor of Arts</h3>
+                        <h4 class="text-lg font-medium text-white">S.N. College</h4>
+                        <p class="text-gray-300">Khandwa, MP</p>
+                        <p class="text-gray-400">2019 – 2021</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h2 class="text-3xl font-bold mb-8 text-blue">PROFESSIONAL EXPERIENCE</h2>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold text-purple">DevOps Engineer Intern</h3>
+                        <h4 class="text-lg font-medium text-white">Hisan Labs</h4>
+                        <p class="text-gray-300">Pune, Maharashtra</p>
+                        <p class="text-gray-400">December, 2024 – June, 2025</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="text-xl font-semibold text-purple">Jr. System Administrator</h3>
+                        <h4 class="text-lg font-medium text-white">Sofmen Technologies Pvt. Ltd.</h4>
+                        <p class="text-gray-300">Indore, Madhya Pradesh</p>
+                        <p class="text-gray-400">June, 2025 – Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">TOOLS & TECHNOLOGIES</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- CI/CD Tools -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-4">
+                            <i data-feather="repeat" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple">CI/CD Tools</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Jenkins</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Gitlab</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">ArgoCD</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Containers & Orchestration -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                            <i data-feather="box" class="text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue">Containers & Orchestration</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Docker</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Docker compose</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Kubernetes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Helm</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- IaC -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-4">
+                            <i data-feather="code" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple">Infrastructure as Code</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Terraform</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Monitoring -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                            <i data-feather="activity" class="text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue">Monitoring</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Zabbix</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Grafana</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Scripting -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-4">
+                            <i data-feather="terminal" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple">Scripting</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Shell Scripting</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Version Control -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                            <i data-feather="git-branch" class="text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue">Version Control</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Git</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">GitHub</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Linux -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-4">
+                            <i data-feather="server" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple">Linux</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">File/User Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Disk Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Patching</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Admin Tasks</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">Networking</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Platform -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center mr-4">
+                            <i data-feather="cloud" class="text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue">Platform</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">DevOps</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">AWS Cloud</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-purple mr-2"></i>
+                            <span class="text-gray-300">Azure</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="skill-card rounded-lg p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center mr-4">
+                            <i data-feather="award" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple">Certifications</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-blue mr-2"></i>
+                            <span class="text-gray-300">AWS Cloud Practitioner</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="section py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">WORK</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-xl p-8" data-aos="fade-right" data-aos-duration="800">
+                    <h3 class="text-2xl font-semibold text-purple mb-4">Responsibilities</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-blue mr-3 mt-1"></i>
+                            <div>
+                                <ul class="space-y-2 pl-4 list-disc text-gray-400">
+                                    <li>Designed and configured Jenkins pipelines to automate build, test and deployment workflows triggered on Git commits</li>
+                                    <li>Provisioned and maintained cloud infrastructure on AWS using Terraform, focusing on EC2, S3, IAM and VPC</li>
+                                    <li>Deployed and managed containerized applications in Kubernetes cluster</li>
+                                    <li>Monitored applications and servers to identify and resolve basic issues</li>
+                                    <li>Automated routine infrastructure and system administration tasks using Bash scripts, improving operational efficiency</li>
+                                    <li>Wrote modular, reusable Terraform code with remote state management and environment segregation</li>
+                                    <li>Collaborated with development and QA teams to streamline CI/CD pipelines and reduce release cycle time</li>
+                                    <li>Contributed to internal documentation and participated in team knowledge-sharing sessions</li>
+                                    <li>Designed and implemented CI/CD pipelines for multiple applications:
+                                        <ul class="pl-4 list-disc">
+                                            <li>Windows application across Development, Staging and Production environments</li>
+                                            <li>React Native mobile application with automated build and deployment workflows</li>
+                                            <li>Laravel application with streamlined integration and delivery processes</li>
+                                        </ul>
+                                    </li>
+                                    <li>Automated deployment workflows and integrated pipelines with GitLab CI/CD for efficient build, test and release cycles</li>
+                                    <li>Troubleshooted and resolved Nginx configuration issues, including domain mismatches by analyzing Nginx logs and container logs</li>
+                                    <li>Used Docker Compose to replicate environments locally for testing before pushing to GitLab pipelines</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl p-8" data-aos="fade-left" data-aos-duration="800">
+                    <h3 class="text-2xl font-semibold text-blue mb-4">Projects</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-feather="github" class="text-purple mr-3 mt-1"></i>
+                            <div>
+                                <span class="text-gray-300 font-medium">Automated CI/CD Pipeline</span>
+                                <p class="text-gray-400 text-sm">Built a Jenkins pipeline for automated testing and deployment</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="github" class="text-purple mr-3 mt-1"></i>
+                            <div>
+                                <span class="text-gray-300 font-medium">Kubernetes Cluster Setup</span>
+                                <p class="text-gray-400 text-sm">Configured and managed a production-grade Kubernetes cluster</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="github" class="text-purple mr-3 mt-1"></i>
+                            <div>
+                                <span class="text-gray-300 font-medium">Infrastructure as Code</span>
+                                <p class="text-gray-400 text-sm">Automated cloud infrastructure provisioning using Terraform</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Shanu Jagtap</span>
+                    <p class="text-gray-400 mt-2">DevOps Engineer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="tel:+916266499234" class="text-purple hover:text-blue transition-colors">
+                        <i data-feather="phone"></i>
+                    </a>
+                    <a href="mailto:shanujagtap@outlook.com" class="text-purple hover:text-blue transition-colors">
+                        <i data-feather="mail"></i>
+                    </a>
+                    <a href="https://github.com/shani877" target="_blank" class="text-purple hover:text-blue transition-colors">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shanu-jagtap-devops/" target="_blank" class="text-purple hover:text-blue transition-colors">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://medium.com/@D-Adda" target="_blank" class="text-purple hover:text-blue transition-colors">
+                        <i data-feather="book"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400 text-sm">
+                <p>© 2024 Shanu Jagtap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Feather icons
+        feather.replace();
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            // For demo purposes, we'll just show a success message
+            console.log('Form submitted:', { name, email, message });
+            
+            // Show success message
+            document.getElementById('formSuccess').classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('formSuccess').classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
